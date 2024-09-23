@@ -1,1 +1,303 @@
-/* место для вашего кода */
+.header {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 94px 50px 96px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    align-items: center;
+  }
+   
+  .header__menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    }
+   
+    .header_menu-list {
+      display: inline-flex;
+      list-style: circle;
+      gap: 33px;
+    } 
+   
+  .header__links-list-item_no-bullit {
+    list-style: none;
+  }
+   
+  .header__logo {
+   width: 148px;
+   height: 105px;
+  }
+   
+  .header__logo-image{
+   width: inherit;
+   height: inherit
+  }
+   
+  .address {
+    display: flex;
+    flex-direction: column;
+    text-underline-position: under;
+    line-height: 25px;
+    margin-right: 37px;
+    justify-self: end;
+    font-style: normal;
+  }
+   
+  .phone {
+    text-decoration: underline;
+  }
+   
+  .cover {
+    background: url("../images/cover.jpg") center/cover;
+    position: relative;
+    width: 100%;
+    height: 757px;
+    width: 1100px;
+  }
+   
+  .cover_title {
+  margin: 165px 50px 134px;
+  }
+   
+  .cover_description {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+    align-items: center;
+    text-align: end;
+    }
+    
+    .cover_description_text {
+      margin-left: 25px;
+      word-spacing: 19px;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: 400;
+      color: #fff;
+    }
+   
+  h1 {
+    letter-spacing: 0.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 100px;
+  }
+   
+  .overlay {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  } 
+   
+  .letter-spacing-extended {
+    letter-spacing: 0.6em;
+    }
+    
+  .aligned-text {
+  font-size: 100px;
+  text-transform: uppercase;
+  text-align: left;
+  }
+   
+  .aligned-text_left {
+    text-align: left;
+   }
+   
+   .aligned-text_center {
+    display: block;
+    line-height: 1;
+   text-align: center;
+  }
+   
+  .aligned-text_right {
+    margin-right: -28px;
+    display: block;
+    line-height: 1;
+   text-align: right;
+  }
+   
+  .no-letter-spacing {
+  letter-spacing: initial;
+  }
+   
+  .bet_button{
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: Raleway;
+    text-decoration: none;
+    background: none;
+    color: #fff;
+    border-color: #fff;
+    padding: 12px 32px;
+  }
+   
+  .lots {
+  padding: 179px 24px 0px;
+  }
+   
+  .lots_heading {
+    padding-left: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+   
+  .lots_items-list {
+    width: 1005;
+    min-height: 563px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 25px;
+    flex-grow: 1;
+    margin-bottom: 30px;
+  }
+   
+  .lot_item {
+    position: relative;
+  margin-top: 27px;
+  height: 563px;
+  width: 334px;
+  }
+   
+  .card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #fff;
+    z-index: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+   
+  .card .overlay {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+   
+  .card_title {
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    }
+    
+    .card-link {
+      text-decoration: none;
+    }
+    
+    .card_text{
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1;
+    }
+   
+  .card_type_film {
+    background-image: url(../images/card-lot-01.jpg);
+  }
+   
+  .card_type_book {
+    background-image: url(../images/card-lot-02.jpg);
+  }
+   
+  .card_type_picture {
+      background-image: url(../images/card-lot-03.jpg);
+  }
+   
+  .see_more_link {
+    text-transform: lowercase;
+    font-size: 20px;
+    padding-left: 40px;
+  }
+   
+  .about {
+    padding-top: 146px;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    gap: 25px;
+  }
+   
+  .about_column {
+    padding-top: 35px;
+    justify-self: center;
+    position: relative;
+  }
+   
+  .logo {
+    position: absolute;
+    left: -110px;
+    background-color: black;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .logo_auction {
+    width: 148px;
+  }
+   
+  .about_column.about_text{
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+  gap: 25px;
+  }
+   
+  .about_title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 100px 0px 75px;
+  }
+   
+  .about_auction {
+  display: flex;
+  font-weight: 400;
+  font-size: 20px;
+  }
+   
+  .footer {
+    display: flex;
+    padding: 180px 50px 88px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+   
+  .footer .address {
+    letter-spacing: 1.3px;
+  }
+   
+  .footer_menu {
+    text-align: center;
+    line-height: 1.4;
+  }
+   
+  .footer_menu-list {
+    display: inline-block;
+    list-style: none;
+  }
+   
+  .footer__social-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  }
+   
+  .footer__social-list-item {
+    height: 48px;
+    width: 48px;
+  }
