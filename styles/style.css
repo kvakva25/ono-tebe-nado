@@ -1,7 +1,7 @@
 .header {
     font-size: 18px;
     font-weight: 400;
-    padding: 94px 50px 96px;
+    padding: 94px 50px;
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     align-items: center;
@@ -50,18 +50,70 @@
   .cover {
     background: url("../images/cover.jpg") center/cover;
     position: relative;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 757px;
+    min-height: 757px;
+    padding: 177px 50px 50px;
   }
    
   .cover_title {
-  margin: 165px 50px 134px;
+    letter-spacing: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 100px;
   }
    
+  /*оверлей спозиционирован абсолютно и закрыт на теущей строке*/
+
+  .overlay {
+    position: absolute;
+    inset: 0px;
+    height: inherit;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  } 
+   
+  .letter-spacing-extended {
+    letter-spacing: 60px;
+    }
+    
+  .aligned-text {
+    position: relative;
+    display: block;
+    font-size: 100px;
+    text-transform: uppercase;
+  }
+
+/* изменена высота строки */
+
+  .aligned-text_left {
+    line-height: 0.9;
+    text-align: left;
+  }
+   
+   .aligned-text_center {
+    line-height: 1.25;
+   text-align: center;
+  }
+   
+  .aligned-text_right {
+    line-height: 0.8;
+    text-align: right;
+  }
+   
+  .no-letter-spacing {
+  letter-spacing: 0px;
+  }
+  
   .cover_description {
+    inset: 603px 13px 0px;
     display: flex;
     justify-content: space-around;
-    margin-top: 130px;
+    z-index: 1;
+    position: absolute;
     align-items: center;
     text-align: end;
     }
@@ -74,60 +126,14 @@
       font-weight: 400;
       color: #fff;
     }
-   
-  h1 {
-    letter-spacing: 0.3em;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 100px;
-  }
-   
-  .overlay {
-    position: absolute;
-    height: inherit;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-  } 
-   
-  .letter-spacing-extended {
-    letter-spacing: 0.6em;
-    }
-    
-  .aligned-text {
-  font-size: 100px;
-  text-transform: uppercase;
-  text-align: left;
-  }
-   
-  .aligned-text_left {
-    text-align: left;
-   }
-   
-   .aligned-text_center {
-    display: block;
-    line-height: 1;
-   text-align: center;
-  }
-   
-  .aligned-text_right {
-    margin-right: -28px;
-    display: block;
-    line-height: 1;
-   text-align: right;
-  }
-   
-  .no-letter-spacing {
-  letter-spacing: initial;
-  }
-   
+
+    /*добавлено свойство шрифта*/
+
   .bet_button {
     font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: Raleway;
+    font-family: Raleway, serif;
     text-decoration: none;
     background: none;
     color: #fff;
@@ -147,8 +153,6 @@
   }
    
   .lots_items-list {
-    width: 1005;
-    min-height: 563px;
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -159,12 +163,13 @@
    
   .lot_item {
     position: relative;
-  margin-top: 27px;
-  height: 563px;
-  width: 334px;
+    margin-top: 27px;
+    min-height: 563px;
+    width: 334px;
   }
    
   .card {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -173,27 +178,23 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-  }
-   
-  .card .overlay {
     padding: 50px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
    
-  .card_title {
-    font-weight: 700;
-    font-size: 22px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    }
+   
+.card_title {
+  position: relative;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  }
     
-    .card-link {
-      text-decoration: none;
-    }
+  .card-link {
+  text-decoration: none;
+  }
     
-    .card_text {
+  .card_text {
     font-weight: 400;
     font-size: 20px;
     text-decoration: none;
@@ -219,10 +220,10 @@
   }
    
   .about {
-    padding-top: 146px;
     display: grid;
-    grid-template-columns: 1.5fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
+    padding: 146px 20px 0px;
   }
    
   .about_column {
@@ -232,8 +233,6 @@
   }
    
   .logo {
-    position: absolute;
-    left: -110px;
     background-color: black;
     height: 240px;
     width: 240px;
@@ -248,6 +247,7 @@
   }
    
   .about_column.about_text {
+    grid-column: 2/4;
   display: flex;
   flex-direction: column;
   padding-right: 24px;
@@ -281,7 +281,8 @@
    
   .footer_menu {
     text-align: center;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.2;
   }
    
   .footer_menu-list {
