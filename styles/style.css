@@ -108,18 +108,22 @@
   letter-spacing: 0px;
   }
   
+  /*позиционирование относительно оверлея*/
+
   .cover_description {
-    inset: 603px 13px 0px;
+    position: relative;
+    top: 143px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1;
-    position: absolute;
     align-items: center;
     text-align: end;
     }
     
+    /*настроен отступ слева*/
+
     .cover_description_text {
-      margin-left: 25px;
+      margin-left: 26px;
       word-spacing: 19px;
       text-transform: uppercase;
       font-size: 22px;
@@ -133,7 +137,7 @@
     font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: Raleway, serif;
+    font-family: Raleway, sans-serif;
     text-decoration: none;
     background: none;
     color: #fff;
@@ -250,7 +254,7 @@
     grid-column: 2/4;
   display: flex;
   flex-direction: column;
-  padding-right: 24px;
+  padding-right: 13px;
   gap: 25px;
   }
    
